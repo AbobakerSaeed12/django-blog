@@ -1,53 +1,51 @@
 form {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    height: 700px; 
-   }
-   label {
-       margin-left: 30px;
-       padding: 10px;
-   }
-   div input, #text{
-       width: 80%;
-       border-color: black;
-       font-weight: bold;
-       font-size: 30px;
-       padding-top: 15px;
-       margin: 10px;
-   }
-   /* div#title, #text{
-       margin-top: 60px;
-   } */
-   #text {
-       height: 100px;
-       font-weight: bold;
-       padding-top: 20px;
-       font-size: 30px;
-   }
-   
-           /* BUTTON */
-    .btn-post {
-        display: flex;
-    }    
-    button.btn {
-        justify-content: center;
-        text-align: center;
-        width: 100px;
-        color: black;
-        border: 2px solid black;
-        border-radius: 20px;
-        padding: 12px 25px;
-        margin-top: 30px;
-        font-size: 20px;
-        background: transparent;
-        cursor: pointer;
-    }
-   
-   button:hover {
-       border: 1px solid;
-       transition: 0.5s;
-       background: #616161;
-   
-   }
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 700px;
+}
+label {
+  margin-left: 30px;
+  padding: 10px;
+}
+div input,
+#text {
+  width: 80%;
+  border-color: black;
+  font-weight: bold;
+  font-size: 30px;
+  padding-top: 15px;
+  margin: 10px;
+}
+
+#text {
+  height: 100px;
+  font-weight: bold;
+  padding-top: 20px;
+  font-size: 30px;
+}
+
+/* BUTTON */
+.btn-post {
+  display: flex;
+}
+button.btn {
+  justify-content: center;
+  text-align: center;
+  width: 100px;
+  color: black;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 12px 25px;
+  margin-top: 30px;
+  font-size: 20px;
+  background: transparent;
+  cursor: pointer;
+}
+
+button:hover {
+  border: 1px solid;
+  transition: 0.5s;
+  background: #616161;
+}
