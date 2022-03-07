@@ -22,8 +22,7 @@
         <div class="card-body">
           <h2 class="card-title">{{ blogpost.title }}</h2>
           <p class="card-text text-muted h6">
-            By {{ blogpost.author }} On ({{ blogpost.publish_date|date:"l,M-d-Y"
-            }})
+            By {{ blogpost.author }} On ({{ blogpost.publish_date|date:"l,M-d-Y"}})
           </p>
           <p class="card-text">{{blogpost.text|slice:":100"}}...</p>
           <a href="{% url 'single-post' blogpost.id  %}" class="btn btn-primary"
