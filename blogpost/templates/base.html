@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Django Blog</title>
     {% load static %}
-    <!-- <link rel="stylesheet" href="{% static 'base/css/base.css' %}"> -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/sketchy/bootstrap.min.css"
@@ -44,8 +43,7 @@
         </div>
       </div>
     </nav>
-    <!-- 
-    <h1>{{ page_title }}</h1> -->
+
     {% block content %} {% endblock %}
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
