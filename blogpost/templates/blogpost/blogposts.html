@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block content %} {% load static %}
+ <header class="masthead">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class=" col-md-8 col-md-10 mx-auto">
+              <div class="site-heading">
+                <h3 class=" site-heading my-4 mt-3 text-black"> Welcome to The Django Blog ✍️ </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>  
+
+<div class="container">
+  <div class="row">
+    <!-- Blog Entries Column -->
+    <div class="col-md-8 mt-3 left">
+      {% for blogpost in blogposts %}
+      <div class="card mb-4">
+        <div class="card-body">
+          <h2 class="card-title">{{ blogpost.title }}</h2>
+          <p class="card-text text-muted h6">
+            By {{ blogpost.author }} On ({{ blogpost.publish_date|date:"l,M-d-Y" }})
+          </p>
+          <p class="card-text">{{blogpost.text|slice:":100"}}...</p>
+          <a href="{% url 'single-post' blogpost.id  %}" class="btn btn-primary"
+            >Read More</a
+          >
+        </div>
+      </div>
+      {% endfor %}
+      <p>{{ blogposts|length }} post{{ blogposts|pluralize }}.</p>
+
+      {% endblock %}
+    </div>
+  </div>
+</div>
