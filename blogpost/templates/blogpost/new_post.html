@@ -1,31 +1,26 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block content %} {% load static %}
+<link rel="stylesheet" href="{% static 'base/css/form.css' %}" />
 
-{% block content %}
-    {% load static %} 
-    <link  rel="stylesheet" href="{% static 'base/css/form.css' %}"> 
+<form action="{% url 'new-post' %}" method="POST">
+  {% csrf_token %}
+  <h1>Create a New Post</h1>
+  <div class="form-row">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" />
+  </div>
+  <div class="form-row">
+    <label for="author">Author:</label>
+    <input type="text" id="author" name="author" />
+  </div>
+  <div class="form-row">
+    <label for="text">Text:</label>
+    <textarea name="text" id="text" cols="30" rows="10"></textarea>
+  </div>
+  <div class="post-btn">
+    <button class="btn" type="submit">Create Post</button>
+  </div>
+</form>
 
-    <form action="{% url 'new-post' %}" method="POST">
-        {% csrf_token %}
-        <h1>Create a New Post</h1>
-        <div class="form-row">
-            <label for="title">Title:</label>
-            <input type="text" id="title" name="title" />
-        </div>
-        <div class="form-row">
-            <label for="author">Author:</label>
-            <input type="text" id="author" name="author" />
-        </div>
-        <div class="form-row">
-            <label for="text">Text:</label>
-            <textarea name="text" id="text" cols="30" rows="10"></textarea>
-        </div>
-        <div class="post-btn">
-            <button class="btn" type="submit">Create Post</button>
-            
-        </div>
-    </form>
+<!-- <a href="{% url 'blogposts' %}">Back</a> -->
 
-    <!-- <a href="{% url 'blogposts' %}">Back</a> -->
-
-  
 {% endblock %}
